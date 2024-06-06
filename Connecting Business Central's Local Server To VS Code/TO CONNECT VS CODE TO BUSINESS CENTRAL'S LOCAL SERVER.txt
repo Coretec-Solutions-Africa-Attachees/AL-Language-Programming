@@ -1,0 +1,28 @@
+TO CONNECT VS CODE TO THE LOCAL BUSINESS CENTRAL SERVER
+
+1. Install AL Language Extension in VS Code:
+2. Open Command Palette in VS Code (Ctrl + Shift + P)
+3. Run 'AL: Go!'
+4. Choose a path to an empty folder
+5. Choose the business central version... for example 6
+6. Choose 'your own server' option 
+7. Configure the 'launch.json' file to fit the details of your server
+	For example:
+	"server": "http://localhost:8080/BC210/?company=CRONUS%20International%20Ltd.&dc=0",
+	"serverInstance": "BC210",
+	"authentication": "Windows",
+8. Run Business Central Administration Shell as administrator and run the following lines of code one at a time:
+
+	Start-NAVServerInstance -ServerInstance BC210
+
+	Set-NAVServerConfiguration -ServerInstance BC210 -KeyName DeveloperServicesEnabled -KeyValue $true
+
+	Set-NAVServerConfiguration -ServerInstance BC210 -KeyName DeveloperServicesPort -KeyValue 7049
+
+	Restart-NAVServerInstance -ServerInstance BC210
+9. Run 'AL: Download Symbols' in Command Palette in VS Code (Ctrl + Shift + P)
+10. Run 'AL: Publish With Debugging' in Command Palette in VS Code (Ctrl + Shift + P)
+11. You should be able to see the HelloWorld.al code working by clicking Customers on the web client
+
+
+The files in this directory are what I used in the above process.
