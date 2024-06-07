@@ -1,3 +1,4 @@
+//check changes made to the launch.json (located in this file's folder) file after creating table
 table 50101 Employee_
 {
     Caption = 'Employee Table';
