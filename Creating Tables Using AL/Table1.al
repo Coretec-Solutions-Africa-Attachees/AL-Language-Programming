@@ -31,7 +31,7 @@ table 50101 Employee_
         field(5; "Remote Work Status"; Boolean)
         {
             DataClassification = ToBeClassified;
-            InitValue = false; //default value is false
+            InitValue = false; //The default value is false
         }
 
     }
