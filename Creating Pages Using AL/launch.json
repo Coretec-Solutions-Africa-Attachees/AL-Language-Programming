@@ -12,7 +12,7 @@
 
             "startupObjectId": 50101,
 
-            //CHANGE TWO: Choosing the startup object type as page
+            //CHANGE ONE: Choosing the startup object type as page
             "startupObjectType": "Page",
 
             "breakOnError": "All",
