@@ -10,10 +10,10 @@
             "serverInstance": "BC210",
             "authentication": "Windows",
 
-            //CHANGE 1: Choosing the table as the starting point
+            //CHANGE ONE: Choosing the table as the starting point
             "startupObjectId": 50101,
 
-            //CHANGE 2: Choosing the startup object type as table
+            //CHANGE TWO: Choosing the startup object type as table
             "startupObjectType": "Table",
 
             "breakOnError": "All",
