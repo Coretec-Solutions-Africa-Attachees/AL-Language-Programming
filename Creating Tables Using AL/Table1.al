@@ -1,4 +1,4 @@
-//check changes made to the launch.json file (located in this file's folder) while creating a table using AL code below
+//check the changes made to the launch.json file (located in this file's folder) while creating a table using AL code below
 
 table 50101 Employee_
 {
