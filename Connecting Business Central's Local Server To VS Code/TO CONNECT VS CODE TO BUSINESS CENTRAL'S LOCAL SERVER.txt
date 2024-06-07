@@ -1,4 +1,4 @@
-TO CONNECT VS CODE TO THE LOCAL BUSINESS CENTRAL SERVER
+HOW TO CONNECT VS CODE TO THE LOCAL BUSINESS CENTRAL SERVER
 
 1. Install AL Language Extension in VS Code:
 2. Open Command Palette in VS Code (Ctrl + Shift + P)
