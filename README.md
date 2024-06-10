@@ -24,28 +24,6 @@ Felix is our mentor guiding us through the learning process. He ensures we adher
 - Gain knowledge on integrating Business Central with other services.
 - Master the process of creating and deploying extensions.
 
-## Getting Started
-To get started with AL programming and Business Central, follow these steps:
-1. **Set Up Development Environment**
-   - Install Visual Studio Code.
-   - Set up AL Language extension for Visual Studio Code.
-   - Configure a Business Central sandbox environment.
-
-2. **Learn AL Basics**
-   - Understand the AL syntax and structure.
-   - Create your first AL project.
-   - Explore basic objects like tables, pages, and codeunits.
-
-3. **Build Your First Extension**
-   - Create a simple table and page extension.
-   - Deploy the extension to your Business Central sandbox.
-   - Test and debug your extension.
-
-4. **Explore Advanced Topics**
-   - Dive into more complex AL programming concepts.
-   - Learn about performance optimization.
-   - Integrate Business Central with external services.
-
 ## Resources
 - [Business Central Documentation](https://docs.microsoft.com/en-us/dynamics365/business-central/)
 - [AL Language Documentation](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-reference-overview)
