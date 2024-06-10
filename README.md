@@ -29,4 +29,3 @@ Felix is our mentor guiding us through the learning process. He ensures we adher
 - [AL Language Documentation](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-reference-overview)
 - [Microsoft Learn: Business Central](https://learn.microsoft.com/en-us/training/browse/?products=dynamics-business-central)
 - [AL Language GitHub Repository](https://github.com/microsoft/AL)
->>>>>>> Stashed changes
