@@ -1,7 +1,7 @@
 # AL Language Programming with Business Central
 
 ## Overview
-Welcome to the repository for learning AL Language with Business Central. This project is undertaken by three dedicated learners and our mentor. We are excited to share our journey and progress with you.
+Welcome to the repository for learning AL Language with Business Central. This project is undertaken by three dedicated learners and our mentor. We are excited to share our journey and progress with you..
 
 ## Contributors
 
