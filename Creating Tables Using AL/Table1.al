@@ -25,7 +25,7 @@ table 50101 Employee_
 
         field(4; Gender; Option)
         {
-            OptionMembers = Male,Female;
+            OptionMembers = "",Male,Female;
             DataClassification = ToBeClassified;
         }
 
