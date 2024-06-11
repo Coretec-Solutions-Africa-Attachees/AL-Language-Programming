@@ -1,3 +1,5 @@
+//check the changes made to the launch.json file (located in this file's folder) while creating a page extension
+
 //for each table extension, it's page is also extended
 pageextension 50102 "Next Of Kin Page" extends "Customer Card"
 {
