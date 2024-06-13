@@ -21,8 +21,9 @@ HOW TO CONNECT VS CODE TO THE LOCAL BUSINESS CENTRAL SERVER
 
 	Restart-NAVServerInstance -ServerInstance BC210
 9. Run 'AL: Download Symbols' in Command Palette in VS Code (Ctrl + Shift + P)
-10. Run 'AL: Publish With Debugging' in Command Palette in VS Code (Ctrl + Shift + P)
-11. You should be able to see the HelloWorld.al code working by clicking Customers on the web client
+10. Run 'AL: Package' in Command Palette in VS Code (Ctrl + Shift + P)
+11. Run 'AL: Publish With Debugging' in Command Palette in VS Code (Ctrl + Shift + P)
+12. You should be able to see the HelloWorld.al code working by clicking Customers on the web client
 
 
 The files in this directory are what I used in the above process.
