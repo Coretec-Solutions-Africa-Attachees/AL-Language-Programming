@@ -1,4 +1,4 @@
-//check the changes made to the launch.json file (located in this file's folder) while creating a table extension
+//Check the changes made to the launch.json file (located in this file's folder) while creating a table extension
 
 tableextension 50102 "Next Of Kin" extends Customer
 {
@@ -23,7 +23,7 @@ tableextension 50102 "Next Of Kin" extends Customer
         {
             Caption = 'Gender';
             DataClassification = ToBeClassified;
-            OptionMembers = "",Male,Female;
+            OptionMembers = " ",Male,Female;
         }
         field(50105; Phone; Text[15])
         {
