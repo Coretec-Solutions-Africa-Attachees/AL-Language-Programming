@@ -8,7 +8,15 @@ page 50103 "Perform Computation"
     ApplicationArea = All;
     UsageCategory = Administration;
 
-    //showing a simple action
+    layout
+    {
+        // Define the page layout
+        area(content)
+        {
+
+        }
+    }
+
     actions
     {
         area(Processing)
@@ -16,9 +24,12 @@ page 50103 "Perform Computation"
             action("Calculate Balance")
             {
                 Caption = 'Calculate Balance';
-                Image = Action;
-
+                Image = Balance;
                 ApplicationArea = All;
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true; // Makes the button large
+                PromotedOnly = true;  // Ensures the button appears without lines when set to true
                 trigger OnAction()
                 begin
                     // Codeunit.Run(50103); // Run the codeunit
