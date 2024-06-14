@@ -37,17 +37,17 @@ page 50104 "Input Page"
 
     trigger OnClosePage();
     var
-        Click: Codeunit "Calculate Difference";
+        CalcDifUnit: Codeunit "Calculate Difference";
     begin
         // if CurrPage.RunModal = Action::LookupOK then begin
         //     // Perform the action when OK is clicked
-        //     Difference := Click.GetDifference(Number1, Number2);
+        //     Difference := CalcDifUnit.GetDifference(Number1, Number2);
         //     CurrPage.Update(false);
         // end else begin
         //     // Perform an action when Cancel is clicked or the page is closed otherwise
         // end;
 
-        Difference := Click.GetDifference(Number1, Number2);
+        Difference := CalcDifUnit.GetDifference(Number1, Number2);
         CurrPage.Update(false);
     end;
 
