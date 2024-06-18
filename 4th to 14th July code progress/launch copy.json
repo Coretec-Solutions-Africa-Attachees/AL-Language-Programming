@@ -9,14 +9,20 @@
             "server": "http://localhost:8080/BC210/",
             "serverInstance": "BC210",
             "authentication": "Windows",
-            "startupObjectId": 22,
-            "startupObjectType": "Page",
+            "startupObjectId": 50101,
+            "startupObjectType": "Table",
             "breakOnError": "All",
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
             "tenant": "default",
+<<<<<<< Updated upstream
             "usePublicURLFromServer": true
+=======
+            "usePublicURLFromServer": true,
+            "schemaUpdateMode":"Recreate"
+            
+>>>>>>> Stashed changes
         }
     ]
 }
