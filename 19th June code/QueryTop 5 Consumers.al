@@ -1,39 +1,51 @@
-query 50107 "Top 5 Consumers"
+query 50108 "Customer Sales by quantity"
 {
-    QueryType = Normal; //This is a normal query
-    Caption = 'Top 5 Consumers'; //Obvious, the caption
-    OrderBy = descending(Sales__LCY_); //Query is sorted in the descending order
-    TopNumberOfRows = 5; //This now returns the top 5 rows 
-    QueryCategory = 'Customer List'; //This will add this query in the CustomerList dropdown
+    // This specifies the type of query. In this case, it's a normal query.
+    QueryType = Normal;
+
+    // This sorts the query results in descending order by the Quantity column.
+    OrderBy = descending(Quantity);
 
     elements
     {
-        dataitem(Cust__Ledger_Entry; "Cust. Ledger Entry") //This is defining a data item whereby the query will retrieve data from
+        // This data item is for the Customer table.
+        dataitem(Customer; Customer)
         {
-            filter(Posting_Date; "Posting Date") //This filter is not actually doing anything, but it acts a s a placeholder for a filter for Posting field
+            // This column is for the customer number.
+            column(CustNo; "No.")
             {
 
             }
-            //Columns below are defined and therefore inculded in the query result
 
-            column(Customer_No_; "Customer No.")
+            // This column is for the customer name.
+            column(CustName; "Name")
             {
 
             }
-            column(Customer_Name; "Customer Name")
-            {
 
-            }
-            column(Sales__LCY_; "Sales (LCY)")
+            // This data item is for the Sales Line table.
+            dataitem(Sales_Line; "Sales Line")
             {
-                Method = Average; //This specifies that the sales(LCY) column should be calculated using the average method
+                // This links the Sales Line data item to the Customer data item using the Sell-to Customer No. field.
+                DataItemLink = "Sell-to Customer No." = Customer."No.";
+
+                // This specifies the type of join. In this case, it's an inner join.
+                SqlJoinType = InnerJoin;
+
+                // This column is for the Quantity field.
+                column(Quantity; Quantity)
+                {
+
+                }
             }
         }
     }
 
+    // This variable is not used anywhere in the code.
     var
         myInt: Integer;
 
+    // This trigger is empty, so it doesn't perform any actions.
     trigger OnBeforeOpen()
     begin
 
