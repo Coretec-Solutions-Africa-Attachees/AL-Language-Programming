@@ -6,6 +6,6 @@ pageextension 50100 CustomerListExt extends "Customer List"
 {
     trigger OnOpenPage();
     begin
-        Message('App published: Enock first Al programming ');
+        Message('Enock first Al programming Learning in Coretec LTD ');
     end;
 }
