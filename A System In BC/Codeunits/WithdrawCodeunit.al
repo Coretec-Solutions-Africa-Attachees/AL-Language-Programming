@@ -17,12 +17,6 @@ codeunit 50114 "WithdrawCodeunit"
             if (WithdrawAmount < 0) then begin
                 Message('Amount To Withdraw Cannot Be Negative❗');
             end else begin
-                WithdrawTable.Init();
-                WithdrawTable.Phone := Phone;
-                WithdrawTable."Withdraw Amount" := WithdrawAmount;
-                WithdrawTable."Withdraw Date" := CurrentDateTime();
-                WithdrawTable.Insert();
-
                 ClientTable.SetFilter(Phone, Phone); // Field name  --Actual value
 
                 if ClientTable.FindFirst() then begin
@@ -30,6 +24,13 @@ codeunit 50114 "WithdrawCodeunit"
 
                     if (WithdrawAmount < OldBalance) then begin
                         NewBalance := OldBalance - WithdrawAmount;
+
+                        WithdrawTable.Init();
+                        WithdrawTable.Phone := Phone;
+                        WithdrawTable."Withdraw Amount" := WithdrawAmount;
+                        WithdrawTable."Withdraw Date" := CurrentDateTime();
+                        WithdrawTable."New Balance" := NewBalance;
+                        WithdrawTable.Insert();
 
                         if ClientTable.FindSet(true) then begin
                             repeat
@@ -40,7 +41,12 @@ codeunit 50114 "WithdrawCodeunit"
                                 end;
                             until ClientTable.Next() = 0;
                         end else begin
-                            Error();
+                            WithdrawTable.SetFilter(Phone, Phone);
+                            if WithdrawTable.FindFirst() then begin
+                                // Delete the row
+                                WithdrawTable.Delete();
+                                Message('Withdrawal Failed❗');
+                            end;
                         end;
 
 
@@ -55,7 +61,7 @@ codeunit 50114 "WithdrawCodeunit"
                         WithdrawTable.SetFilter(Phone, Phone);
                         if WithdrawTable.FindFirst() then begin
                             // Delete the row
-                            WithdrawTable.Delete();
+                            // WithdrawTable.Delete();
                             Message('Withdrawal Failed❗\Your balance, %1💲, is not enough to make this withdrawal.', OldBalance);
                         end;
                     end;
@@ -67,11 +73,6 @@ codeunit 50114 "WithdrawCodeunit"
 
     procedure Error()
     begin
-        WithdrawTable.SetFilter(Phone, Phone);
-        if WithdrawTable.FindFirst() then begin
-            // Delete the row
-            WithdrawTable.Delete();
-            Message('Withdrawal Failed❗');
-        end;
+        Message('Withdrawal Failed❗');
     end;
 }
