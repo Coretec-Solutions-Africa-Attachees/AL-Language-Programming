@@ -17,17 +17,18 @@ codeunit 50111 "DepositCodeunit"
             if (DepositAmount < 0) then begin
                 Message('Deposit Cannot Be Negative❗');
             end else begin
-                DepositTable.Init();
-                DepositTable.Phone := Phone;
-                DepositTable."Deposit Amount" := DepositAmount;
-                DepositTable."Deposit Date" := CurrentDateTime();
-                DepositTable.Insert();
-
                 ClientTable.SetFilter(Phone, Phone); // Field name  --Actual value
 
                 if ClientTable.FindFirst() then begin
                     OldBalance := ClientTable."Account Balance";
                     NewBalance := OldBalance + DepositAmount;
+
+                    DepositTable.Init();
+                    DepositTable.Phone := Phone;
+                    DepositTable."Deposit Amount" := DepositAmount;
+                    DepositTable."Deposit Date" := CurrentDateTime();
+                    DepositTable."New Balance" := NewBalance;
+                    DepositTable.Insert();
 
                     if ClientTable.FindSet(true) then begin
                         repeat
@@ -50,7 +51,7 @@ codeunit 50111 "DepositCodeunit"
                     // end;
 
                 end else begin
-                    Error();
+                    Message('Deposit Failed❗');
                 end;
             end;
     end;
