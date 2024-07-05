@@ -24,7 +24,12 @@ table 50111 "DepositTable"
             DataClassification = ToBeClassified;
         }
 
-        field(4; "Deposit Date"; DateTime)
+        field(4; "New Balance"; Decimal)
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(5; "Deposit Date"; DateTime)
         {
             DataClassification = ToBeClassified;
         }
