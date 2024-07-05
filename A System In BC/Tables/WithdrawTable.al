@@ -24,7 +24,12 @@ table 50114 "WithdrawTable"
             DataClassification = ToBeClassified;
         }
 
-        field(4; "Withdraw Date"; DateTime)
+        field(4; "New Balance"; Decimal)
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(5; "Withdraw Date"; DateTime)
         {
             DataClassification = ToBeClassified;
         }
