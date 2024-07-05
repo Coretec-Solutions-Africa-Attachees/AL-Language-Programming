@@ -61,7 +61,7 @@ page 50113 "Menu"
 
             action(GenerateClientReport)
             {
-                Caption = 'Generate Report';
+                Caption = 'Generate Your Report';
                 Image = Export;
                 ToolTip = 'A report contains the history of your successful transactions';
                 Promoted = true;
@@ -69,12 +69,9 @@ page 50113 "Menu"
 
                 trigger OnAction()
                 begin
-
+                    Report.Run(50117);
                 end;
             }
-
-
-
 
             action("Log Out")
             {
