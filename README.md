@@ -41,7 +41,7 @@
     <td>Felix</td>
     <td>Mentor</td>
     <td>🧠 Guiding & Best Practices</td>
-    <td><a href="https://github.com/orgs/Coretec-Solutions-Africa-Attachees/people/MuneneFelix">Felix's GitHub</a></td>
+    <td><a href="https://github.com/MuneneFelix">Felix's GitHub</a></td>
   </tr>
 </table>
 
@@ -97,24 +97,32 @@
 
 <ol>
   <li>📥 Install AL Language Extension in VS Code:</li>
+  <img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20extension.png">
   <li>🖱️ Open Command Palette in VS Code (Ctrl + Shift + P)</li>
+
   <li>🏃‍♂️ Run 'AL: Go!'</li>
-  <li>📁 Choose a path to an empty folder</li>
+  <img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20Go.png">
   <li>🔢 Choose the business central version... for example 6</li>
   <li>🖥️ Choose 'your own server' option</li>
   <li>⚙️ Configure the 'launch.json' file to fit the details of your server</li>
+  <img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Launch%20Json.png">
 </ol>
 
 <p>For example:</p>
+<img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/BC%20admin%20shell.png">
+
+<img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/BC%20admin%20shell%20run%20as%20admin.png">
 
 <pre><code>{
   "server": "http://localhost:8080/BC210/?company=CRONUS%20International%20Ltd.&dc=0",
   "serverInstance": "BC210",
-  "authentication": "Windows",
+  "authentication": "Windows"
 }
 </code></pre>
 
 <p>🛠️ Run Business Central Administration Shell as administrator and run the following lines of code one at a time:</p>
+
+<img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Bc%20Cmd%20png.png">
 
 <pre><code>Start-NAVServerInstance -ServerInstance BC210
 Set-NAVServerConfiguration -ServerInstance BC210 -KeyName DeveloperServicesEnabled -KeyValue $true
@@ -124,10 +132,15 @@ Restart-NAVServerInstance -ServerInstance BC210
 
 <ol start="8">
   <li>📥 Run 'AL: Download Symbols' in Command Palette in VS Code (Ctrl + Shift + P)</li>
-  
+  <img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Download%20Symbols.png">
   <li>📦 Run 'AL: Package' in Command Palette in VS Code (Ctrl + Shift + P)</li>
+  <img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20Package.png">
   <li>🚀 Run 'AL: Publish With Debugging' in Command Palette in VS Code (Ctrl + Shift + P)</li>
+  <img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Publish%20with%20Debugging.png">
   <li>🎉 You should be able to see the HelloWorld.al code working by clicking Customers on the web client</li>
+  <img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Hello%20World.png">
 </ol>
 
 <p>The files in this directory are what we used in the above process. Happy coding! 🎊👨‍💻👩‍💻</p>
+
+<h2>🙏 Special Thanks</h2> <table> <tr> <th>Name</th> <th>Contribution</th> <th>GitHub</th> </tr> <tr> <td><strong>Aquilla</strong></td> <td>🎨 Designing the README layout and formatting</td> <td><a href="https://github.com/AquilaMuturi">Aquilla's GitHub</a></td> </tr> <tr> <td><strong>Kevo</strong></td> <td>🖋️ Crafting engaging and informative content</td> <td><a href="https://github.com/kelvintechsolutions">Kevo's GitHub</a></td> </tr> </table> <p style="font-weight: bold; color: #ff69b4;"> 🔥 Thank you both for your invaluable contributions!</p>
