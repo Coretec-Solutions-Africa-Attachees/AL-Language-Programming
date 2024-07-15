@@ -26,14 +26,14 @@ table 50101 "Exam Booking"
         {
             DataClassification = ToBeClassified;
             Caption = 'Exam Date';
+            Editable = true;
             // Add additional properties and validation rules as needed
         }
         field(5; "Status"; Option)
         {
             DataClassification = ToBeClassified;
             Caption = 'Status';
-            OptionMembers = Pending,Confirmed,Completed;
-            // Add additional properties and validation rules as needed
+            OptionMembers = "",Pending,Confirmed,Completed;
         }
     }
 
@@ -52,6 +52,13 @@ table 50101 "Exam Booking"
     begin
         if "Booking ID" = 0 then
             "Booking ID" := GetNextBookingID();
+
+    end;
+
+    trigger OnModify()
+    begin
+        if "Exam Date" = 0D then
+            "Exam Date" := WorkDate; // Ensure Exam Date is not zero on modification
     end;
 
     var
@@ -68,5 +75,8 @@ table 50101 "Exam Booking"
         NextBookingID := LastBookingID + 1;
         exit(NextBookingID);
     end;
-}
 
+    var
+
+
+}
