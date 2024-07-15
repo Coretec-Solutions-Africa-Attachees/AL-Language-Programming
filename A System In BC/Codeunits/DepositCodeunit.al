@@ -42,14 +42,6 @@ codeunit 50111 "DepositCodeunit"
                         Error();
                     end;
 
-                    // if ClientTable.Get(Phone) then begin
-                    //     ClientTable."Account Balance" := NewBalance;
-                    //     ClientTable.Modify();
-                    //     Message('Deposit Successful✅You have deposited: %1💲\Your New Balance Is: %2💲', DepositAmount, NewBalance);
-                    // end else begin
-                    //     Error();
-                    // end;
-
                 end else begin
                     Message('Deposit Failed❗');
                 end;
