@@ -15,7 +15,7 @@ page 50111 "Deposit"
                 {
                     // ApplicationArea = All;
                     Caption = 'Deposit ID (Not Editable)';
-                    Editable = false; // Disabling the ability of ID to be edited
+                    Editable = false;
                 }
                 group("Client Information")
                 {
@@ -23,7 +23,7 @@ page 50111 "Deposit"
                     {
                         // ApplicationArea = All;
                         Caption = 'Client''s Phone Number(Not Editable)';
-                        Editable = false; // Disabling the ability of ID to be edited                    
+                        Editable = false;
                     }
                 }
                 group("Enter Amount You'd Wish To Deposit:")
@@ -42,7 +42,7 @@ page 50111 "Deposit"
                 {
                     // ApplicationArea = All;
                     Caption = 'Deposit Date And Time (Not Editable)';
-                    Editable = false; // Disabling the ability of ID to be edited
+                    Editable = false;
                 }
             }
         }
