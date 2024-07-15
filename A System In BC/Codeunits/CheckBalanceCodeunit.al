@@ -11,7 +11,6 @@ codeunit 50115 "CheckBalanceCodeunit"
         Phone := SharedVariablesCodeunit.GetSharedVariablePhone();
         ClientTable.SetFilter(Phone, Phone);
         if ClientTable.FindFirst() then begin
-            // Fetch the data from the specific column (e.g., "Name" column)
             Balance := ClientTable."Account Balance";
             Message('Your Balance Is: %1💲', Balance);
         end;
