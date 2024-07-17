@@ -49,19 +49,9 @@ codeunit 50114 "WithdrawCodeunit"
                             end;
                         end;
 
-
-                        // if ClientTable.Get(Phone) then begin
-                        //     ClientTable."Account Balance" := NewBalance;
-                        //     ClientTable.Modify();
-                        //     Message('Withdrawal Successful✅You have withdrawn: %1💲\Your New Balance Is: %2💲', WithdrawAmount, NewBalance);
-                        // end else begin
-                        //     Error();
-                        // end;
                     end else begin
                         WithdrawTable.SetFilter(Phone, Phone);
                         if WithdrawTable.FindFirst() then begin
-                            // Delete the row
-                            // WithdrawTable.Delete();
                             Message('Withdrawal Failed❗\Your balance, %1💲, is not enough to make this withdrawal.', OldBalance);
                         end;
                     end;
