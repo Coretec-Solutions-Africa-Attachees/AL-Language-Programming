@@ -122,8 +122,8 @@ page 50109 "Create Account"
                 // ApplicationArea = All;
                 Promoted = true;
                 PromotedCategory = Process;
-                PromotedIsBig = true; // Makes the button large
-                PromotedOnly = true;  // Ensures the button appears without lines when set to true
+                PromotedIsBig = true;
+                PromotedOnly = true;
                 trigger OnAction()
                 begin
                     CreateAccountCodeunit.InsertData(FirstName, MiddleName, LastNameSurname, DateOfBirth, Gender, Email, Phone, AccountBalance, Password);
@@ -149,4 +149,3 @@ page 50109 "Create Account"
         Phone: Text[20];
         AccountBalance: Decimal;
         Password: Text[100];
-}
