@@ -88,19 +88,8 @@ table 50109 "ClientTable"
         myInt: Integer;
 
     trigger OnInsert()
-    //Ensuring the first record's primary key is 1 and the other primary keys increment
-    // var
-    //     mytable: Record "ClientTable";
-    //     lastpk: Integer;
     begin
-        // if mytable.FindLast then
-        //     lastpk := mytable."Client ID"
-        // else
-        //     lastpk := 0;
 
-        // Rec."Client ID" := lastpk + 1;
-
-        // Message('Data Recorded Successfully');
     end;
 
     trigger OnModify()
