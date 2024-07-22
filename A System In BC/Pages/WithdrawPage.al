@@ -23,7 +23,7 @@ page 50114 "Withdraw"
                     {
                         // ApplicationArea = All;
                         Caption = 'Client''s Phone Number(Not Editable)';
-                        Editable = false; // Disabling the ability of ID to be edited                    
+                        Editable = false;
                     }
                 }
                 group("Enter Amount You'd Wish To Withdraw:")
@@ -42,7 +42,7 @@ page 50114 "Withdraw"
                 {
                     // ApplicationArea = All;
                     Caption = 'Withdraw Date And Time (Not Editable)';
-                    Editable = false; // Disabling the ability of ID to be edited
+                    Editable = false;
                 }
             }
         }
