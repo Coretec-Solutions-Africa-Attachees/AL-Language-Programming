@@ -3,7 +3,6 @@ page 50113 "Menu"
     PageType = Card;
     layout
     {
-        // Define the page layout
         area(content)
         {
 
@@ -21,8 +20,8 @@ page 50113 "Menu"
                 // ApplicationArea = All;
                 Promoted = true;
                 PromotedCategory = Process;
-                PromotedIsBig = true; // Makes the button large
-                PromotedOnly = true;  // Ensures the button appears without lines when set to true
+                PromotedIsBig = true;
+                PromotedOnly = true;
                 trigger OnAction()
                 begin
                     Page.Run(50111);
@@ -36,8 +35,8 @@ page 50113 "Menu"
                 // ApplicationArea = All;
                 Promoted = true;
                 PromotedCategory = Process;
-                PromotedIsBig = true; // Makes the button large
-                PromotedOnly = true;  // Ensures the button appears without lines when set to true
+                PromotedIsBig = true;
+                PromotedOnly = true;
                 trigger OnAction()
                 begin
                     Page.Run(50114);
@@ -51,8 +50,8 @@ page 50113 "Menu"
                 // ApplicationArea = All;
                 Promoted = true;
                 PromotedCategory = Process;
-                PromotedIsBig = true; // Makes the button large
-                PromotedOnly = true;  // Ensures the button appears without lines when set to true
+                PromotedIsBig = true;
+                PromotedOnly = true;
                 trigger OnAction()
                 begin
                     CheckBalanceCodeunit.CheckBalance();
@@ -80,8 +79,8 @@ page 50113 "Menu"
                 // ApplicationArea = All;
                 Promoted = true;
                 PromotedCategory = Process;
-                PromotedIsBig = true; // Makes the button large
-                PromotedOnly = true;  // Ensures the button appears without lines when set to true
+                PromotedIsBig = true;
+                PromotedOnly = true;
                 trigger OnAction()
                 begin
                     LogOutCodeunit.LogOut();
