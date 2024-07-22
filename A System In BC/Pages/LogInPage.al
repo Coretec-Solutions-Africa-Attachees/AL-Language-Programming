@@ -49,8 +49,8 @@ page 50110 "Log In"
                 // ApplicationArea = All;
                 Promoted = true;
                 PromotedCategory = Process;
-                PromotedIsBig = true; // Makes the button large
-                PromotedOnly = true;  // Ensures the button appears without lines when set to true
+                PromotedIsBig = true;
+                PromotedOnly = true;
                 trigger OnAction()
                 begin
                     Page.Run(50109);
@@ -65,8 +65,8 @@ page 50110 "Log In"
                 // ApplicationArea = All;
                 Promoted = true;
                 PromotedCategory = Process;
-                PromotedIsBig = true; // Makes the button large
-                PromotedOnly = true;  // Ensures the button appears without lines when set to true
+                PromotedIsBig = true;
+                PromotedOnly = true;
                 trigger OnAction()
                 begin
                     LogInCodeUnit.LogIn(Phone, Password);
