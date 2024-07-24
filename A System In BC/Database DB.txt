@@ -1,0 +1,35 @@
+CREATE DATABASE DB;
+SHOW DATABASES;
+USE DB;
+
+CREATE TABLE ClientTable (
+    ClientID INT PRIMARY KEY AUTO_INCREMENT,
+    FirstName VARCHAR(25),
+    MiddleName VARCHAR(25),
+    LastNameOrSirName VARCHAR(25),
+    DoB DATE,
+    Gender VARCHAR(6),
+    Email VARCHAR(100),
+    Phone VARCHAR(100),
+    AccountBalance DECIMAL(10, 2),
+    Password VARCHAR(50),
+    INDEX (Phone)  -- Add this line to create an index on the Phone column
+);
+
+CREATE TABLE DepositTable (
+    DepositID INT PRIMARY KEY AUTO_INCREMENT,
+    Phone1 VARCHAR(100),
+    FOREIGN KEY (Phone1) REFERENCES ClientTable(Phone),
+    DepositAmount DECIMAL(10, 2),
+    DepositDate DATE
+);
+
+CREATE TABLE WithdrawTable (
+    WithdrawID INT PRIMARY KEY AUTO_INCREMENT,
+    Phone1 VARCHAR(100),
+    FOREIGN KEY (Phone1) REFERENCES ClientTable(Phone),
+    WithdrawAmount DECIMAL(10, 2),
+    WithdrawDate DATE
+);
+
+-- DROP DATABASE DB;
