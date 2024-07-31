@@ -4,62 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AL Language Programming with Business Central</title>
-  <style>
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background-color: #f2f2f2;
-    }
-    img {
-      width: auto; /* Change to auto to maintain aspect ratio */
-      max-width: 100%; /* Ensure image fits within its container */
-      height: auto;
-    }
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 5px;
-      font-size: 16px;
-      color: #fff;
-      background-color: #007bff;
-      border: none;
-      border-radius: 4px;
-      text-decoration: none;
-      text-align: center;
-    }
-    .button:hover {
-      background-color: #0056b3;
-    }
-    pre {
-      background-color: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      padding: 10px;
-      overflow: auto;
-    }
-  </style>
 </head>
 <body>
   <h1>🚀 AL Language Programming with Business Central</h1>
+  
   <p>
-    <a href="#how-to-connect-vs-code-to-the-local-business-central-server" class="button">Connect VS Code to Local BC Server</a>
-    <a href="#configuring-bc-with-docker" class="button">Configure BC with Docker</a>
-    <a href="#configuring-bc-with-local-server-for-navuserpassword-authentication" class="button">Configure BC with NavUserPassword</a>
+    <a href="#how-to-connect-vs-code-to-the-local-business-central-server">
+      <button>Connect VS Code to Local BC Server</button>
+    </a>
+    <a href="#configuring-bc-with-docker">
+      <button>Configure BC with Docker</button>
+    </a>
+    <a href="#configuring-bc-with-local-server-for-navuserpassword-authentication">
+      <button>Configure BC with NavUserPassword</button>
+    </a>
   </p>
 
   <h2>🌟 Overview</h2>
-  <p>Welcome to the repository for learning AL Language with Business Central. This project is undertaken by three dedicated learners and our mentor. We are excited to share our journey and progress with you.</p>
+  <p>
+    Welcome to the repository for learning AL Language with Business Central. This project is undertaken by three dedicated learners and our mentor. We are excited to share our journey and progress with you.
+  </p>
 
   <h2>👥 Contributors</h2>
-  <table>
+  <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
     <tr>
       <th>Name</th>
       <th>Role</th>
@@ -141,7 +108,7 @@
   </ul>
 
   <h2 id="how-to-connect-vs-code-to-the-local-business-central-server">🔧 HOW TO CONNECT VISUAL STUDIO CODE TO THE LOCAL BUSINESS CENTRAL SERVER</h2>
-  <table>
+  <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
     <tr>
       <th width="10%">Step</th>
       <th width="45%">Action</th>
@@ -150,7 +117,7 @@
     <tr>
       <td>1</td>
       <td>Install AL Language Extension in VS Code</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20extension.png" alt="AL Extension"></td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20extension.png" width="100%" alt="Install AL Language Extension in VS Code"></td>
     </tr>
     <tr>
       <td>2</td>
@@ -160,7 +127,7 @@
     <tr>
       <td>3</td>
       <td>Run 'AL: Go!'</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20Go.png" alt="AL Go"></td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20Go.png" width="100%" alt="Run 'AL: Go!'"></td>
     </tr>
     <tr>
       <td>4</td>
@@ -175,66 +142,54 @@
     <tr>
       <td>6</td>
       <td>Configure the 'launch.json' file to fit your server details</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Launch%20json.png" alt="launch.json"></td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Launch%20Json.png" width="100%" alt="Configure the 'launch.json' file"></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Run Business Central Administration Shell as administrator and execute the following commands:
+        <pre><code>Start-NAVServerInstance -ServerInstance BC210
+Set-NAVServerConfiguration -ServerInstance BC210 -KeyName DeveloperServicesEnabled -KeyValue $true
+Set-NAVServerConfiguration -ServerInstance BC210 -KeyName DeveloperServicesPort -KeyValue 7049
+Restart-NAVServerInstance -ServerInstance BC210</code></pre>
+      </td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Bc%20Cmd%20png.png" width="100%" alt="Run Business Central Administration Shell"></td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Run 'AL: Download Symbols' in Command Palette</td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Download%20Symbols
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Run 'AL: Download Symbols' in Command Palette</td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Download%20Symbols.png" width="100%" alt="Run 'AL: Download Symbols'"></td>
     </tr>
   </table>
 
-  <h2 id="configuring-bc-with-docker">🛠️ CONFIGURING BUSINESS CENTRAL WITH DOCKER</h2>
-  <table>
-    <tr>
-      <th width="10%">Step</th>
-      <th width="45%">Action</th>
-      <th width="45%">Visual Guide</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Download Docker and install</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Docker%20install.png" alt="Docker Install"></td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Pull Business Central Docker image</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Run Docker container with Business Central</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/BC%20Docker%20Container.png" alt="BC Docker Container"></td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Access Business Central through the Docker container</td>
-      <td></td>
-    </tr>
-  </table>
+  <h2 id="configuring-bc-with-docker">🐳 Configuring BC with Docker</h2>
+  <p>Follow these steps to configure Business Central with Docker:</p>
+  <ol>
+    <li>🔄 Pull the latest Business Central Docker image using the command:
+      <pre><code>docker pull mcr.microsoft.com/businesscentral/sandbox:bc</code></pre>
+    </li>
+    <li>🚀 Run the Docker container with Business Central using:
+      <pre><code>docker run -e accept_eula=Y -e deploy_service=Y -e "username=admin" -e "password=Password" -p 8080:80 -p 7049:7049 mcr.microsoft.com/businesscentral/sandbox:bc</code></pre>
+    </li>
+    <li>🔍 Access Business Central at [http://localhost:8080](http://localhost:8080) using the credentials you provided.</li>
+  </ol>
 
-  <h2 id="configuring-bc-with-local-server-for-navuserpassword-authentication">🔒 CONFIGURING BUSINESS CENTRAL WITH LOCAL SERVER FOR NAVUSERPASSWORD AUTHENTICATION</h2>
-  <table>
-    <tr>
-      <th width="10%">Step</th>
-      <th width="45%">Action</th>
-      <th width="45%">Visual Guide</th>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>Open Business Central Administration Tool</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/BC%20Admin%20Tool.png" alt="BC Admin Tool"></td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Configure Authentication to NavUserPassword</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Restart Business Central Service</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Restart%20Service.png" alt="Restart Service"></td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Test Connection</td>
-      <td></td>
-    </tr>
-  </table>
+  <h2 id="configuring-bc-with-local-server-for-navuserpassword-authentication">🔐 Configuring BC with Local Server for NavUserPassword Authentication</h2>
+  <p>To configure Business Central for NavUserPassword authentication:</p>
+  <ol>
+    <li>⚙️ Ensure Business Central is running with the correct configuration for NavUserPassword authentication.</li>
+    <li>🔑 Configure your Business Central instance to accept NavUserPassword authentication through PowerShell or the Business Central Administration Shell.</li>
+    <li>🛠️ Modify the 'launch.json' file in VS Code to use the appropriate credentials and authentication method.</li>
+  </ol>
+
+  <h2>📢 Conclusion</h2>
+  <p>We hope this guide helps you get started with AL Language programming in Business Central. Feel free to explore the resources and contribute to the project. Happy coding!</p>
+
+  <h2>📬 Contact</h2>
+  <p>If you have any questions or feedback, please reach out to us at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
 </body>
 </html>
