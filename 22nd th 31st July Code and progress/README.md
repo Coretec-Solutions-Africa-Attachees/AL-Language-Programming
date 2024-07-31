@@ -1,45 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AL Language Programming with Business Central</title>
+  <style>
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .custom-button {
+      padding: 10px 20px;
+      background-color: #0078D4;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .custom-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    #scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #0078D4;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      transition: opacity 0.3s ease;
+    }
+    #scroll-to-top:hover {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
 <h1 align="center">🚀 AL Language Programming with Business Central</h1>
-<style>
-  .button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  .custom-button {
-    padding: 10px 20px;
-    background-color: #0078D4;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  .custom-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  #scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #0078D4;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
-    transition: opacity 0.3s ease;
-  }
-  #scroll-to-top:hover {
-    opacity: 0.8;
-  }
-</style>
+
 <div class="button-container">
   <a href="#-how-to-connect-vs-code-to-the-local-business-central-server">
     <button class="custom-button">Connect VS Code to Local BC Server</button>
@@ -51,7 +61,9 @@
     <button class="custom-button">Configure BC with NavUserPassword</button>
   </a>
 </div>
+
 <button id="scroll-to-top" onclick="scrollToTop()">↑</button>
+
 <script>
   window.onscroll = function() {scrollFunction()};
 
@@ -68,6 +80,7 @@
     document.documentElement.scrollTop = 0;
   }
 </script>
+
 
 <h2>🌟 Overview</h2>
 <p>
@@ -175,7 +188,7 @@
   <tr>
     <td>3</td>
     <td>Run 'AL: Go!'</td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20Go.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20Go.png" width="1000%"></td>
   </tr>
   <tr>
     <td>4</td>
@@ -190,7 +203,7 @@
   <tr>
     <td>6</td>
     <td>Configure the 'launch.json' file to fit your server details</td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Launch%20Json.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Launch%20Json.png" width="1000%"></td>
   </tr>
   <tr>
     <td>7</td>
@@ -200,27 +213,27 @@ Set-NAVServerConfiguration -ServerInstance BC210 -KeyName DeveloperServicesEnabl
 Set-NAVServerConfiguration -ServerInstance BC210 -KeyName DeveloperServicesPort -KeyValue 7049
 Restart-NAVServerInstance -ServerInstance BC210</code></pre>
     </td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Bc%20Cmd%20png.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Bc%20Cmd%20png.png" width="1000%"></td>
   </tr>
   <tr>
     <td>8</td>
     <td>Run 'AL: Download Symbols' in Command Palette</td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Download%20Symbols.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Download%20Symbols.png" width="1000%"></td>
   </tr>
   <tr>
     <td>9</td>
     <td>Run 'AL: Package' in Command Palette</td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20Package.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20Package.png" width="1000%"></td>
   </tr>
   <tr>
     <td>10</td>
     <td>Run 'AL: Publish With Debugging' in Command Palette</td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Publish%20with%20Debugging.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Publish%20with%20Debugging.png" width="1000%"></td>
   </tr>
   <tr>
     <td>11</td>
     <td>Verify HelloWorld.al code by clicking Customers on the web client</td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Hello%20World.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Hello%20World.png" width="1000%"></td>
   </tr>
 </table>
 <h2 id="-configuring-bc-with-docker">🐳 CONFIGURING BC WITH DOCKER</h2>
@@ -233,7 +246,7 @@ Restart-NAVServerInstance -ServerInstance BC210</code></pre>
   <tr>
     <td>1</td>
     <td>Download and install Docker Desktop</td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/switch%20to%20windows.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/switch%20to%20windows.png" width="1000%"></td>
   </tr>
   <tr>
     <td>2</td>
@@ -243,7 +256,7 @@ Restart-NAVServerInstance -ServerInstance BC210</code></pre>
         <li>Switch to Windows containers</li>
       </ul>
     </td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/Docker%20Disable%20WSL%20engine.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/Docker%20Disable%20WSL%20engine.png" width="1000%"></td>
   </tr>
   <tr>
     <td>3</td>
@@ -252,7 +265,7 @@ Restart-NAVServerInstance -ServerInstance BC210</code></pre>
     </td>
     <td>
       <img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/BcContainerWizard%20powershell.png" width="100%">
-      <img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/BcContainer%20helper%20Poweshell.png" width="100%">
+      <img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/BcContainer%20helper%20Poweshell.png" width="1000%">
     </td>
   </tr>
   <tr>
@@ -282,12 +295,12 @@ New-BcContainer
   <tr>
     <td>5</td>
     <td>Wait for the image to be created and Docker to appear</td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/Docker%20IMS.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/Docker%20IMS.png" width="1000%"></td>
   </tr>
   <tr>
     <td>6</td>
     <td>Inspect the created container</td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/Ims%20Logs%20.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/Ims%20Logs%20.png" width="1000%"></td>
   </tr>
   <tr>
     <td>7</td>
@@ -297,7 +310,7 @@ New-BcContainer
         <li>Password: P@ssw0rd</li>
       </ul>
     </td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/login.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/login.png" width="1000%"></td>
   </tr>
   <tr>
     <td>8</td>
@@ -351,7 +364,7 @@ New-BcContainer
     <td>Find and import the NavAdminTool.ps1 module:
     <pre><code>Import-Module "C:\Program Files\Microsoft Dynamics 365 Business Central\210\Service\NavAdminTool.ps1"</code></pre>
     </td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/Poweshell%20ImportModule.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/Poweshell%20ImportModule.png" width="1000%"></td>
   </tr>
   <tr>
     <td>4</td>
@@ -360,7 +373,7 @@ New-BcContainer
 Set-NAVServerConfiguration -KeyName ClientServicesCredentialType -ServerInstance BC210 -KeyValue NavUserPassword
 Restart-NAVServerInstance -ServerInstance BC210</code></pre>
     </td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/NavUserPassword%20Codes.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/NavUserPassword%20Codes.png" width="1000%"></td>
   </tr>
   <tr>
     <td>5</td>
@@ -370,7 +383,7 @@ Restart-NAVServerInstance -ServerInstance BC210</code></pre>
   <tr>
     <td>6</td>
     <td>Log in using the credentials of a user you've already created in BC</td>
-    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/login.png" width="100%"></td>
+    <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/login.png" width="1000%"></td>
   </tr>
 </table>
 <p><strong>Note:</strong> To revert to Windows authentication, replace 'NavUserPassword' with 'Windows' in the above commands or use these commands:</p>
