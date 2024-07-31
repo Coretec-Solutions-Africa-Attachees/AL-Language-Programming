@@ -158,38 +158,3 @@ Restart-NAVServerInstance -ServerInstance BC210</code></pre>
       <td>8</td>
       <td>Run 'AL: Download Symbols' in Command Palette</td>
       <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Download%20Symbols
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>Run 'AL: Download Symbols' in Command Palette</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Download%20Symbols.png" width="100%" alt="Run 'AL: Download Symbols'"></td>
-    </tr>
-  </table>
-
-  <h2 id="configuring-bc-with-docker">🐳 Configuring BC with Docker</h2>
-  <p>Follow these steps to configure Business Central with Docker:</p>
-  <ol>
-    <li>🔄 Pull the latest Business Central Docker image using the command:
-      <pre><code>docker pull mcr.microsoft.com/businesscentral/sandbox:bc</code></pre>
-    </li>
-    <li>🚀 Run the Docker container with Business Central using:
-      <pre><code>docker run -e accept_eula=Y -e deploy_service=Y -e "username=admin" -e "password=Password" -p 8080:80 -p 7049:7049 mcr.microsoft.com/businesscentral/sandbox:bc</code></pre>
-    </li>
-    <li>🔍 Access Business Central at [http://localhost:8080](http://localhost:8080) using the credentials you provided.</li>
-  </ol>
-
-  <h2 id="configuring-bc-with-local-server-for-navuserpassword-authentication">🔐 Configuring BC with Local Server for NavUserPassword Authentication</h2>
-  <p>To configure Business Central for NavUserPassword authentication:</p>
-  <ol>
-    <li>⚙️ Ensure Business Central is running with the correct configuration for NavUserPassword authentication.</li>
-    <li>🔑 Configure your Business Central instance to accept NavUserPassword authentication through PowerShell or the Business Central Administration Shell.</li>
-    <li>🛠️ Modify the 'launch.json' file in VS Code to use the appropriate credentials and authentication method.</li>
-  </ol>
-
-  <h2>📢 Conclusion</h2>
-  <p>We hope this guide helps you get started with AL Language programming in Business Central. Feel free to explore the resources and contribute to the project. Happy coding!</p>
-
-  <h2>📬 Contact</h2>
-  <p>If you have any questions or feedback, please reach out to us at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
-</body>
-</html>
