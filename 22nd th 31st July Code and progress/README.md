@@ -19,29 +19,44 @@
       background-color: #f2f2f2;
     }
     img {
-      width: 100%;
+      width: auto; /* Change to auto to maintain aspect ratio */
+      max-width: 100%; /* Ensure image fits within its container */
       height: auto;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      text-align: center;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    pre {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 10px;
+      overflow: auto;
     }
   </style>
 </head>
 <body>
   <h1>🚀 AL Language Programming with Business Central</h1>
   <p>
-    <a href="#-how-to-connect-vs-code-to-the-local-business-central-server">
-      <button>Connect VS Code to Local BC Server</button>
-    </a>
-    <a href="#-configuring-bc-with-docker">
-      <button>Configure BC with Docker</button>
-    </a>
-    <a href="#-configuring-bc-with-local-server-for-navuserpassword-authentication">
-      <button>Configure BC with NavUserPassword</button>
-    </a>
+    <a href="#how-to-connect-vs-code-to-the-local-business-central-server" class="button">Connect VS Code to Local BC Server</a>
+    <a href="#configuring-bc-with-docker" class="button">Configure BC with Docker</a>
+    <a href="#configuring-bc-with-local-server-for-navuserpassword-authentication" class="button">Configure BC with NavUserPassword</a>
   </p>
 
   <h2>🌟 Overview</h2>
-  <p>
-    Welcome to the repository for learning AL Language with Business Central. This project is undertaken by three dedicated learners and our mentor. We are excited to share our journey and progress with you.
-  </p>
+  <p>Welcome to the repository for learning AL Language with Business Central. This project is undertaken by three dedicated learners and our mentor. We are excited to share our journey and progress with you.</p>
 
   <h2>👥 Contributors</h2>
   <table>
@@ -72,7 +87,7 @@
     <tr>
       <td>Felix</td>
       <td>Mentor</td>
-      <td> Senior Software Dev 🧑‍💻</td>
+      <td>Senior Software Dev 🧑‍💻</td>
       <td><a href="https://github.com/MuneneFelix">Felix's GitHub</a></td>
     </tr>
   </table>
@@ -125,7 +140,7 @@
     <li><a href="https://github.com/microsoft/AL">💻 AL Language GitHub Repository</a></li>
   </ul>
 
-  <h2 id="-how-to-connect-vs-code-to-the-local-business-central-server">🔧 HOW TO CONNECT VISUAL STUDIO CODE TO THE LOCAL BUSINESS CENTRAL SERVER</h2>
+  <h2 id="how-to-connect-vs-code-to-the-local-business-central-server">🔧 HOW TO CONNECT VISUAL STUDIO CODE TO THE LOCAL BUSINESS CENTRAL SERVER</h2>
   <table>
     <tr>
       <th width="10%">Step</th>
@@ -135,7 +150,7 @@
     <tr>
       <td>1</td>
       <td>Install AL Language Extension in VS Code</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20extension.png" width="100%"></td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20extension.png" alt="AL Extension"></td>
     </tr>
     <tr>
       <td>2</td>
@@ -145,7 +160,7 @@
     <tr>
       <td>3</td>
       <td>Run 'AL: Go!'</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20Go.png" width="100%"></td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Al%20Go.png" alt="AL Go"></td>
     </tr>
     <tr>
       <td>4</td>
@@ -160,26 +175,11 @@
     <tr>
       <td>6</td>
       <td>Configure the 'launch.json' file to fit your server details</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Launch%20Json.png" width="100%"></td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>Run Business Central Administration Shell as administrator and execute the following commands:
-        <pre><code>Start-NAVServerInstance -ServerInstance BC210
-Set-NAVServerConfiguration -ServerInstance BC210 -KeyName DeveloperServicesEnabled -KeyValue $true
-Set-NAVServerConfiguration -ServerInstance BC210 -KeyName DeveloperServicesPort -KeyValue 7049
-Restart-NAVServerInstance -ServerInstance BC210</code></pre>
-      </td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Bc%20Cmd%20png.png" width="100%"></td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>Run 'AL: Download Symbols' in Command Palette</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Download%20Symbols.png" width="100%"></td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Launch%20json.png" alt="launch.json"></td>
     </tr>
   </table>
 
-  <h2 id="-configuring-bc-with-docker">🐳 CONFIGURING BC WITH DOCKER</h2>
+  <h2 id="configuring-bc-with-docker">🛠️ CONFIGURING BUSINESS CENTRAL WITH DOCKER</h2>
   <table>
     <tr>
       <th width="10%">Step</th>
@@ -188,81 +188,27 @@ Restart-NAVServerInstance -ServerInstance BC210</code></pre>
     </tr>
     <tr>
       <td>1</td>
-      <td>Download and install Docker Desktop</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/switch%20to%20windows.png" width="1000%"></td>
+      <td>Download Docker and install</td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Docker%20install.png" alt="Docker Install"></td>
     </tr>
     <tr>
       <td>2</td>
-      <td>Configure Docker settings:
-        <ul>
-          <li>Disable the WSL checkbox</li>
-          <li>Switch to Windows containers</li>
-        </ul>
-      </td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/Docker%20Disable%20WSL%20engine.png" width="1000%"></td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Install BC Container Helper by running this command in PowerShell:
-        <pre><code>Install-Module BcContainerHelper -force</code></pre>
-      </td>
-      <td>
-        <img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/BcContainerWizard%20powershell.png" width="100%">
-        <img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/BcContainer%20helper%20Poweshell.png" width="1000%">
-      </td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>Execute the following script in PowerShell:
-        <pre><code>$containerName = 'ims'
-$password = 'P@ssw0rd'
-$securePassword = ConvertTo-SecureString -String $password -AsPlainText -Force
-$credential = New-Object pscredential 'admin', $securePassword
-$auth = 'UserPassword'
-$artifactUrl = Get-BcArtifactUrl -type 'OnPrem' -country 'w1' -select 'Latest'
-$bcContainerHelperConfig.artifactDownloadTimeout = 3600
-New-BcContainer 
-    -accept_eula 
-    -containerName $containerName 
-    -credential $credential 
-    -auth $auth 
-    -artifactUrl $artifactUrl 
-    -imageName 'imsbcscript:latest' 
-    -multitenant 
-    -memoryLimit 4G 
-    -vsixFile (Get-LatestAlLanguageExtensionUrl) 
-    -updateHosts</code></pre>
-      </td>
+      <td>Pull Business Central Docker image</td>
       <td></td>
     </tr>
     <tr>
-      <td>5</td>
-      <td>Wait for the image to be created and Docker to appear</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/Docker%20IMS.png" width="1000%"></td>
+      <td>3</td>
+      <td>Run Docker container with Business Central</td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/BC%20Docker%20Container.png" alt="BC Docker Container"></td>
     </tr>
     <tr>
-      <td>6</td>
-      <td>Inspect the created container</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/Ims%20Logs%20.png" width="1000%"></td>
-    </tr>
-    <tr>
-      <td>7</td>
-      <td>Run the web client and log in:
-        <ul>
-          <li>Username: admin</li>
-          <li>Password: P@ssw0rd</li>
-        </ul>
-      </td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/login.png" width="1000%"></td>
-    </tr>
-    <tr>
-      <td>8</td>
-      <td>Access the Role Center</td>
+      <td>4</td>
+      <td>Access Business Central through the Docker container</td>
       <td></td>
     </tr>
   </table>
 
-  <h2 id="-configuring-bc-with-local-server-for-navuserpassword-authentication">🔐 CONFIGURING BC WITH LOCAL SERVER FOR NAVUSERPASSWORD AUTHENTICATION</h2>
+  <h2 id="configuring-bc-with-local-server-for-navuserpassword-authentication">🔒 CONFIGURING BUSINESS CENTRAL WITH LOCAL SERVER FOR NAVUSERPASSWORD AUTHENTICATION</h2>
   <table>
     <tr>
       <th width="10%">Step</th>
@@ -271,69 +217,24 @@ New-BcContainer
     </tr>
     <tr>
       <td>1</td>
-      <td>Create or update the launch.json file in your IDE with the following configuration:
-        <pre><code>{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Kife's server",
-      "request": "launch",
-      "type": "al",
-      "environmentType": "OnPrem",
-      "server": "http://localhost:8080/BC210/",
-      "serverInstance": "BC210",
-      "authentication": "UserPassword",
-      "startupObjectId": 18,
-      "startupObjectType": "Table",
-      "breakOnError": "All",
-      "launchBrowser": true,
-      "enableLongRunningSqlStatements": true,
-      "enableSqlInformationDebugger": true,
-      "tenant": "default",
-      "usePublicURLFromServer": true,
-      "schemaUpdateMode": "ForceSync"
-    }
-  ]
-}</code></pre>
-      </td>
-      <td></td>
+      <td>Open Business Central Administration Tool</td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/BC%20Admin%20Tool.png" alt="BC Admin Tool"></td>
     </tr>
     <tr>
       <td>2</td>
-      <td>Open PowerShell ISE as administrator</td>
+      <td>Configure Authentication to NavUserPassword</td>
       <td></td>
     </tr>
     <tr>
       <td>3</td>
-      <td>Find and import the NavAdminTool.ps1 module:
-        <pre><code>Import-Module "C:\Program Files\Microsoft Dynamics 365 Business Central\210\Service\NavAdminTool.ps1"</code></pre>
-      </td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/Poweshell%20ImportModule.png" width="1000%"></td>
+      <td>Restart Business Central Service</td>
+      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/11th%20July%20Progress%2C%20Screenshots%20for%20github%20readme/Restart%20Service.png" alt="Restart Service"></td>
     </tr>
     <tr>
       <td>4</td>
-      <td>Run the following commands to change to NavUserPassword authentication:
-        <pre><code>Set-NAVWebServerInstanceConfiguration -KeyName ClientServicesCredentialType -KeyValue NavUserPassword -WebServerInstance BC210
-Set-NAVServerConfiguration -KeyName ClientServicesCredentialType -ServerInstance BC210 -KeyValue NavUserPassword
-Restart-NAVServerInstance -ServerInstance BC210</code></pre>
-      </td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/NavUserPassword%20Codes.png" width="1000%"></td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Publish your code to run in BC</td>
+      <td>Test Connection</td>
       <td></td>
     </tr>
-    <tr>
-      <td>6</td>
-      <td>Log in using the credentials of a user you've already created in BC</td>
-      <td><img src="https://raw.githubusercontent.com/Coretec-Solutions-Africa-Attachees/AL-Language-Programming/Enock/30th%20July%20code/login.png" width="1000%"></td>
-    </tr>
   </table>
-  <p><strong>Note:</strong> To revert to Windows authentication, replace 'NavUserPassword' with 'Windows' in the above commands or use these commands:</p>
-  <pre><code>Set-NAVWebServerInstanceConfiguration -KeyName ClientServicesCredentialType -KeyValue Windows -WebServerInstance BC210
-Set-NAVServerConfiguration -KeyName ClientServicesCredentialType -ServerInstance BC210 -KeyValue Windows
-Restart-NAVServerInstance -ServerInstance BC210</code></pre>
-  <p>Remember to restart the server after making these changes.</p>
 </body>
 </html>
