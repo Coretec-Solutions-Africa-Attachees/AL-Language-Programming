@@ -125,7 +125,7 @@
     <li><a href="https://github.com/microsoft/AL">💻 AL Language GitHub Repository</a></li>
   </ul>
 
-  <h2 id="-how-to-connect-vs-code-to-the-local-business-central-server">🔧 HOW TO CONNECT VS CODE TO THE LOCAL BUSINESS CENTRAL SERVER</h2>
+  <h2 id="-how-to-connect-vs-code-to-the-local-business-central-server">🔧 HOW TO CONNECT VISUAL STUDIO CODE TO THE LOCAL BUSINESS CENTRAL SERVER</h2>
   <table>
     <tr>
       <th width="10%">Step</th>
