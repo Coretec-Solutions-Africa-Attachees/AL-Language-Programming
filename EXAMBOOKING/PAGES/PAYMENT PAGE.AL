@@ -28,6 +28,10 @@ page 50102 payment
                 {
                     applicationArea = All;
                 }
+                field("Payment Date"; Rec."Payment Date")
+                {
+                    applicationArea = All;
+                }
             }
             group("FILL IN  THIS SECTION CORRECTLY")
             {
@@ -43,10 +47,7 @@ page 50102 payment
                 {
                     applicationArea = All;
                 }
-                field("Payment Date"; Rec."Payment Date")
-                {
-                    applicationArea = All;
-                }
+
                 field("Payment Status"; Rec."Payment Status")
                 {
                     applicationArea = All;

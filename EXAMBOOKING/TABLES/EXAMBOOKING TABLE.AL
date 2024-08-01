@@ -8,12 +8,14 @@ table 50101 "Exam Booking"
         {
             DataClassification = ToBeClassified;
             Caption = 'Booking ID';
+            Editable = false;
             // Add additional properties and validation rules as needed
         }
         field(2; "Student ID"; Integer)
         {
             DataClassification = ToBeClassified;
             Caption = 'Student ID';
+            Editable = false;
             // Add additional properties and validation rules as needed
         }
         field(3; "Exam Name"; Text[100])
@@ -22,7 +24,7 @@ table 50101 "Exam Booking"
             Caption = 'Exam Name';
             // Add additional properties and validation rules as needed
         }
-        field(4; "Exam Date"; Date)
+        field(4; "Exam Date"; DateTime)
         {
             DataClassification = ToBeClassified;
             Caption = 'Exam Date';
@@ -33,7 +35,7 @@ table 50101 "Exam Booking"
         {
             DataClassification = ToBeClassified;
             Caption = 'Status';
-            OptionMembers = "",Pending,Confirmed,Completed;
+            OptionMembers = "",Pending,Confirmed,Cancelled;
         }
     }
 
@@ -57,8 +59,8 @@ table 50101 "Exam Booking"
 
     trigger OnModify()
     begin
-        if "Exam Date" = 0D then
-            "Exam Date" := WorkDate; // Ensure Exam Date is not zero on modification
+        // if "Exam Date" = 0D then
+        //"Exam Date" := WorkDate; // Ensure Exam Date is not zero on modification
     end;
 
     var

@@ -8,7 +8,7 @@ page 50100 "Student Card"
     {
         area(Content)
         {
-            group(GroupName)
+            group("FILL IN DETAILS")
             {
                 field("Student ID"; Rec."Student ID")
                 {

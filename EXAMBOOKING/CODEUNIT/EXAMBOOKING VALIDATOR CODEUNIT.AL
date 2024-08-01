@@ -24,10 +24,10 @@ codeunit 50103 "Exam Booking Validator"
             IsValid := false;
         end;
 
-        if not ValidateExamDate(ExamBooking."Exam Date", ErrorMessage) then begin
-            Message(ErrorMessage);
-            IsValid := false;
-        end;
+        //if not ValidateExamDate(ExamBooking."Exam Date", ErrorMessage) then begin
+        //Message(ErrorMessage);
+        //IsValid := false;
+        //end;
 
         if not ValidateStatus(ExamBooking.Status, ErrorMessage) then begin
             Message(ErrorMessage);
@@ -79,4 +79,3 @@ codeunit 50103 "Exam Booking Validator"
         exit(true);
     end;
 }
-

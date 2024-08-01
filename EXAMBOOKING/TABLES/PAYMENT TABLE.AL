@@ -25,35 +25,38 @@ table 50102 "payment table"
         field(4; "Transcation ID"; Integer)
         {
             DataClassification = ToBeClassified;
+            AutoIncrement = true;
             Caption = 'Transcation ID';
             Editable = false;
         }
-        field(5; "Payment Method"; Option)
+        field(5; "Payment Date"; DateTime)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = "","Credit/Debit/PrePaid Card","Bank Transfer","BITCOIN","PayCashLess","M-Pesa",JamboPay,"Pesaflow Direct";
+            Caption = 'Payment Date';
+            Editable = false;
         }
-        field(6; Currency; Option)
+        field(6; "Payment Method"; Option)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = "","KES","USD","EUR","GBP";
+            OptionMembers = "","Credit/Debit/PrePaid Card","Bank Transfer","BINANCE","OKX","OTHER PAYMENT METHODS","PayCashLess","M-Pesa",JamboPay,"Pesaflow Direct";
         }
-        field(7; "Payment Amount"; Integer)
+        field(7; Currency; Option)
+        {
+            DataClassification = ToBeClassified;
+            OptionMembers = "","BITCOIN","KES","USD","EUR","GBP";
+        }
+        field(8; "Payment Amount"; Integer)
         {
             DataClassification = ToBeClassified;
             Caption = 'Payment Amount';
         }
-        field(8; "Payment Date"; Date)
-        {
-            DataClassification = ToBeClassified;
-            Caption = 'Payment Date';
-        }
+
 
         field(9; "Payment Status"; Option)
         {
             DataClassification = ToBeClassified;
             Caption = 'Payment Status';
-            OptionMembers = "","Not Paid","Pending","comfirmed";
+            OptionMembers = "","Not Paid","Pending","confirmed";
         }
     }
 
@@ -81,11 +84,15 @@ table 50102 "payment table"
     var
         myInt: Integer;
 
+
+    var
+        PaymentDateFiller: Codeunit "PaymentDateFiller";
+
     trigger OnInsert()
     begin
-
+        // Call the codeunit procedure to set the Payment Date
+        PaymentDateFiller.AutoFillPaymentDate(Rec);
     end;
-
 
     trigger OnModify()
     begin
