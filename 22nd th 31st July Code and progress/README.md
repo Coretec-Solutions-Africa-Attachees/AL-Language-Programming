@@ -91,4 +91,4 @@ To get started with AL programming and Business Central, follow these steps:
 ```powershell
 Set-NAVWebServerInstanceConfiguration -KeyName ClientServicesCredentialType -KeyValue Windows -WebServerInstance BC210
 Set-NAVServerConfiguration -KeyName ClientServicesCredentialType -ServerInstance BC210 -KeyValue Windows
-Restart-NAVServerInstance -ServerInstance BC210
+Restart-NAVServerInstance -ServerInstance BC210 
